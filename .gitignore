@@ -2,3 +2,4 @@ models/
 mri-tumor/
 mri-tumor-org/
 __pycache__/
+.DS_Store
