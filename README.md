@@ -31,6 +31,7 @@ The train.py file outlines the train function which takes the model, optimizer, 
 ### Results
 
 During training a number of key measures are taken including the training loss, validation loss, and the validation accuracy. The results per epoch are recorded below.
+
 ![Training Performance Graphs](images/training_results.png)
 
 The above performance records the results for a model with 12 epochs per epoch on the validation dataset. Below is the performance of a model trained across 50 epochs when tested using the test dataset. 
