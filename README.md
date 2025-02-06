@@ -42,7 +42,7 @@ The above performance records the results for a model with 12 epochs per epoch o
 | **Correctly Classified Healthy** | 164 |
 | **Total Tumor Samples** | 259 |
 | **Correctly Classified Tumor** | 257 |
-| **Accuracy** | 99.36% |
+| **Accuracy** | 99.53% |
 | **Precision (Positive: Tumor)** | 100% |
 | **Recall (Positive: Tumor)** | 99.23% |
 | **F1 Score (Positive: Tumor)** | 99.61% |
