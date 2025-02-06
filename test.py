@@ -41,4 +41,7 @@ for tumor in tumor_file_names:
     tumor_predict_list.append(labels[prediction])
     
 print(healthy_predict_list)
+print(len(healthy_predict_list))
+
 print(tumor_predict_list)
+print(len(tumor_predict_list))

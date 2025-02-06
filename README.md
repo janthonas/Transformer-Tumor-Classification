@@ -1,4 +1,4 @@
-# Tumor Classification using Transformer based Neural Network
+# Tumor Classification using a Transformer Based Neural Network
 
 ## Introduction
 
@@ -29,6 +29,22 @@ The train.py file outlines the train function which takes the model, optimizer, 
 ### Testing the Model
 
 ### Results
+
+During training a number of key measures are taken including the training loss, validation loss, and the validation accuracy. The results per epoch are recorded below.
+![Training Performance Graphs](images/training_results.png)
+
+The above performance records the results for a model with 12 epochs per epoch on the validation dataset. Below is the performance of a model trained across 50 epochs when tested using the test dataset. 
+
+| Metric        | Value     |
+|--------------|----------|
+| **Total Healthy Samples** | 164 |
+| **Correctly Classified Healthy** | 164 |
+| **Total Tumor Samples** | 259 |
+| **Correctly Classified Tumor** | 257 |
+| **Accuracy** | 99.36% |
+| **Precision (Positive: Tumor)** | 100% |
+| **Recall (Positive: Tumor)** | 99.23% |
+| **F1 Score (Positive: Tumor)** | 99.61% |
 
 ## Making Predictions with the Model
 
