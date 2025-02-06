@@ -28,6 +28,8 @@ The train.py file outlines the train function which takes the model, optimizer, 
 
 ### Testing the Model
 
+The file test.py is used to test the model. This puts all of the test images into a given model, and returns the predictions from the model. 
+
 ### Results
 
 During training a number of key measures are taken including the training loss, validation loss, and the validation accuracy. The results per epoch are recorded below.
