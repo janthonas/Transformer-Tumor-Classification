@@ -5,11 +5,13 @@ import torch
 
 import os
 
+# Loads a given model
 state_dict = torch.load("models/best_tumor_model.pth")
 transfer_model.load_state_dict(state_dict)
 
 labels = ['Healthy', 'Tumor']
 
+# Loads the available test files
 healthy_folder_path = "mri-tumor-org/test/Healthy"
 healthy_file_names = [os.path.join(healthy_folder_path, f) for f in os.listdir(healthy_folder_path) if os.path.isfile(os.path.join(healthy_folder_path, f))]
 
@@ -39,7 +41,8 @@ for tumor in tumor_file_names:
     prediction = transfer_model(img)
     prediction = prediction.argmax()
     tumor_predict_list.append(labels[prediction])
-    
+
+# Prints the results
 print(healthy_predict_list)
 print(len(healthy_predict_list))
 

@@ -2,6 +2,7 @@ from network_architecture import transfer_model, optimizer, train_data_loader, v
 import torch
 import torch.nn as nn
 
+# Best model was achieved with 50 epochs
 def train(model, 
           optimizer, 
           loss_fn, 
@@ -36,14 +37,14 @@ def train(model,
         
         for batch in train_loader:
             optimizer.zero_grad()
-            inputs, targets = batch
-            inputs = inputs.to(device)
-            targets = targets.to(device)
-            output = model(inputs)
-            loss = loss_fn(output, targets)
-            loss.backward()
-            optimizer.step()
-            training_loss += loss.data.item()
+            inputs, targets = batch 
+            inputs = inputs.to(device) # Moves inputs to appropriate device
+            targets = targets.to(device) # Moves outputs to appropriate device
+            output = model(inputs) # Puts inputs into the current model
+            loss = loss_fn(output, targets) # Compute how far outputs are from targets
+            loss.backward() # Computes gradients for all parameters relative to loss
+            optimizer.step() # Applies gradient descent to update model parameters
+            training_loss += loss.data.item() # Calculates average loss per batch
         training_loss /= len(train_loader)
         print(f"Epoch {epoch+1}/{epochs}, Training Loss: {training_loss}")
         training_loss_list.append(training_loss)
